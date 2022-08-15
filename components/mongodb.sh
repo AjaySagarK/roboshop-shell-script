@@ -9,7 +9,7 @@ systemctl start mongod
 #Config file: `/etc/mongod.conf`
 
 #then restart the service
-vim /etc/mongod.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 
 systemctl restart mongod
 
